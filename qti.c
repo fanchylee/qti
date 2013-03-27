@@ -5,7 +5,6 @@
 #include <math.h>
 
 /*compute the Schmidt Decomposition
- *recursively
  */
 int sd(
 	gsl_vector* v,
