@@ -53,7 +53,7 @@ bin_PROGRAMS = qti$(EXEEXT)
 subdir = .
 DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/configure depcomp install-sh missing
+	$(top_srcdir)/configure compile depcomp install-sh missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -68,7 +68,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_qti_OBJECTS = qti.$(OBJEXT)
 qti_OBJECTS = $(am_qti_OBJECTS)
-qti_LDADD = $(LDADD)
+qti_DEPENDENCIES =
 DEFAULT_INCLUDES = -I.
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -120,6 +120,8 @@ ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
 EXEEXT = 
+F77 = gfortran
+FFLAGS = -g -O2
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -150,6 +152,7 @@ abs_srcdir = /media/__ubuntu_11.10_/home/li3939108/qti
 abs_top_builddir = /media/__ubuntu_11.10_/home/li3939108/qti
 abs_top_srcdir = /media/__ubuntu_11.10_/home/li3939108/qti
 ac_ct_CC = gcc
+ac_ct_F77 = gfortran
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -188,6 +191,7 @@ top_build_prefix =
 top_builddir = .
 top_srcdir = .
 qti_SOURCES = qti.c
+qti_LDADD = -lm
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 

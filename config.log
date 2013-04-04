@@ -28,6 +28,11 @@ uname -v = #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012
 /bin/universe          = unknown
 
 PATH: /home/li3939108/perl5/bin
+PATH: /opt/intel/composer_xe_2013.3.163/bin/intel64
+PATH: /opt/intel/composer_xe_2013.3.163/mpirt/bin/intel64
+PATH: /opt/intel/composer_xe_2013.3.163/bin/intel64
+PATH: /opt/intel/composer_xe_2013.3.163/bin/intel64_mic
+PATH: /opt/intel/composer_xe_2013.3.163/debugger/gui/intel64
 PATH: /home/li3939108/Documents/android-sdk-linux/tools
 PATH: /home/li3939108/Documents/android-sdk-linux/platform-tools
 PATH: /opt/larceny-0.97-bin-native-ia32-linux86/
@@ -45,29 +50,29 @@ PATH: /usr/local/games
 ## Core tests. ##
 ## ----------- ##
 
-configure:2110: checking for a BSD-compatible install
-configure:2178: result: /usr/bin/install -c
-configure:2189: checking whether build environment is sane
-configure:2239: result: yes
-configure:2380: checking for a thread-safe mkdir -p
-configure:2419: result: /bin/mkdir -p
-configure:2432: checking for gawk
-configure:2448: found /usr/bin/gawk
-configure:2459: result: gawk
-configure:2470: checking whether make sets $(MAKE)
-configure:2492: result: yes
-configure:2620: checking for gcc
-configure:2636: found /usr/bin/gcc
-configure:2647: result: gcc
-configure:2876: checking for C compiler version
-configure:2885: gcc --version >&5
+configure:2155: checking for a BSD-compatible install
+configure:2223: result: /usr/bin/install -c
+configure:2234: checking whether build environment is sane
+configure:2284: result: yes
+configure:2425: checking for a thread-safe mkdir -p
+configure:2464: result: /bin/mkdir -p
+configure:2477: checking for gawk
+configure:2493: found /usr/bin/gawk
+configure:2504: result: gawk
+configure:2515: checking whether make sets $(MAKE)
+configure:2537: result: yes
+configure:2666: checking for gcc
+configure:2682: found /usr/bin/gcc
+configure:2693: result: gcc
+configure:2922: checking for C compiler version
+configure:2931: gcc --version >&5
 gcc (Ubuntu/Linaro 4.7.2-2ubuntu1) 4.7.2
 Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:2896: $? = 0
-configure:2885: gcc -v >&5
+configure:2942: $? = 0
+configure:2931: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.7/lto-wrapper
@@ -75,60 +80,129 @@ Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.7.2-2ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-4.7/README.Bugs --enable-languages=c,c++,go,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.7 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.7 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 4.7.2 (Ubuntu/Linaro 4.7.2-2ubuntu1) 
-configure:2896: $? = 0
-configure:2885: gcc -V >&5
+configure:2942: $? = 0
+configure:2931: gcc -V >&5
 gcc: error: unrecognized command line option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:2896: $? = 4
-configure:2885: gcc -qversion >&5
+configure:2942: $? = 4
+configure:2931: gcc -qversion >&5
 gcc: error: unrecognized command line option '-qversion'
 gcc: fatal error: no input files
 compilation terminated.
-configure:2896: $? = 4
-configure:2916: checking whether the C compiler works
-configure:2938: gcc    conftest.c  >&5
-configure:2942: $? = 0
-configure:2990: result: yes
-configure:2993: checking for C compiler default output file name
-configure:2995: result: a.out
-configure:3001: checking for suffix of executables
-configure:3008: gcc -o conftest    conftest.c  >&5
-configure:3012: $? = 0
-configure:3034: result: 
-configure:3056: checking whether we are cross compiling
-configure:3064: gcc -o conftest    conftest.c  >&5
-configure:3068: $? = 0
-configure:3075: ./conftest
-configure:3079: $? = 0
-configure:3094: result: no
-configure:3099: checking for suffix of object files
-configure:3121: gcc -c   conftest.c >&5
+configure:2942: $? = 4
+configure:2962: checking whether the C compiler works
+configure:2984: gcc    conftest.c  >&5
+configure:2988: $? = 0
+configure:3036: result: yes
+configure:3039: checking for C compiler default output file name
+configure:3041: result: a.out
+configure:3047: checking for suffix of executables
+configure:3054: gcc -o conftest    conftest.c  >&5
+configure:3058: $? = 0
+configure:3080: result: 
+configure:3102: checking whether we are cross compiling
+configure:3110: gcc -o conftest    conftest.c  >&5
+configure:3114: $? = 0
+configure:3121: ./conftest
 configure:3125: $? = 0
-configure:3146: result: o
-configure:3150: checking whether we are using the GNU C compiler
-configure:3169: gcc -c   conftest.c >&5
-configure:3169: $? = 0
-configure:3178: result: yes
-configure:3187: checking whether gcc accepts -g
-configure:3207: gcc -c -g  conftest.c >&5
-configure:3207: $? = 0
-configure:3248: result: yes
-configure:3265: checking for gcc option to accept ISO C89
-configure:3328: gcc  -c -g -O2  conftest.c >&5
-configure:3328: $? = 0
-configure:3341: result: none needed
-configure:3372: checking for style of include used by make
-configure:3400: result: GNU
-configure:3426: checking dependency style of gcc
-configure:3537: result: gcc3
-configure:3563: checking how to run the C preprocessor
-configure:3594: gcc -E  conftest.c
-configure:3594: $? = 0
-configure:3608: gcc -E  conftest.c
+configure:3140: result: no
+configure:3145: checking for suffix of object files
+configure:3167: gcc -c   conftest.c >&5
+configure:3171: $? = 0
+configure:3192: result: o
+configure:3196: checking whether we are using the GNU C compiler
+configure:3215: gcc -c   conftest.c >&5
+configure:3215: $? = 0
+configure:3224: result: yes
+configure:3233: checking whether gcc accepts -g
+configure:3253: gcc -c -g  conftest.c >&5
+configure:3253: $? = 0
+configure:3294: result: yes
+configure:3311: checking for gcc option to accept ISO C89
+configure:3374: gcc  -c -g -O2  conftest.c >&5
+configure:3374: $? = 0
+configure:3387: result: none needed
+configure:3418: checking for style of include used by make
+configure:3446: result: GNU
+configure:3472: checking dependency style of gcc
+configure:3583: result: gcc3
+configure:3652: checking for g77
+configure:3682: result: no
+configure:3652: checking for xlf
+configure:3682: result: no
+configure:3652: checking for f77
+configure:3682: result: no
+configure:3652: checking for frt
+configure:3682: result: no
+configure:3652: checking for pgf77
+configure:3682: result: no
+configure:3652: checking for cf77
+configure:3682: result: no
+configure:3652: checking for fort77
+configure:3682: result: no
+configure:3652: checking for fl32
+configure:3682: result: no
+configure:3652: checking for af77
+configure:3682: result: no
+configure:3652: checking for xlf90
+configure:3682: result: no
+configure:3652: checking for f90
+configure:3682: result: no
+configure:3652: checking for pgf90
+configure:3682: result: no
+configure:3652: checking for pghpf
+configure:3682: result: no
+configure:3652: checking for epcf90
+configure:3682: result: no
+configure:3652: checking for gfortran
+configure:3668: found /usr/bin/gfortran
+configure:3679: result: gfortran
+configure:3705: checking for Fortran 77 compiler version
+configure:3714: gfortran --version >&5
+GNU Fortran (Ubuntu/Linaro 4.7.2-2ubuntu1) 4.7.2
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies of GNU Fortran
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING
+
+configure:3725: $? = 0
+configure:3714: gfortran -v >&5
+Using built-in specs.
+COLLECT_GCC=gfortran
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.7/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu/Linaro 4.7.2-2ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-4.7/README.Bugs --enable-languages=c,c++,go,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.7 --enable-shared --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.7 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --enable-plugin --enable-objc-gc --disable-werror --with-arch-32=i686 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 4.7.2 (Ubuntu/Linaro 4.7.2-2ubuntu1) 
+configure:3725: $? = 0
+configure:3714: gfortran -V >&5
+gfortran: error: unrecognized command line option '-V'
+gfortran: fatal error: no input files
+compilation terminated.
+configure:3725: $? = 4
+configure:3714: gfortran -qversion >&5
+gfortran: error: unrecognized command line option '-qversion'
+gfortran: fatal error: no input files
+compilation terminated.
+configure:3725: $? = 4
+configure:3734: checking whether we are using the GNU Fortran 77 compiler
+configure:3747: gfortran -c  conftest.F >&5
+configure:3747: $? = 0
+configure:3756: result: yes
+configure:3762: checking whether gfortran accepts -g
+configure:3773: gfortran -c -g conftest.f >&5
+configure:3773: $? = 0
+configure:3781: result: yes
+configure:3821: checking how to run the C preprocessor
+configure:3852: gcc -E  conftest.c
+configure:3852: $? = 0
+configure:3866: gcc -E  conftest.c
 conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
 compilation terminated.
-configure:3608: $? = 1
+configure:3866: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "qti"
@@ -141,13 +215,13 @@ configure: failed program was:
 | #define VERSION "0.01"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:3633: result: gcc -E
-configure:3653: gcc -E  conftest.c
-configure:3653: $? = 0
-configure:3667: gcc -E  conftest.c
+configure:3891: result: gcc -E
+configure:3911: gcc -E  conftest.c
+configure:3911: $? = 0
+configure:3925: gcc -E  conftest.c
 conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
 compilation terminated.
-configure:3667: $? = 1
+configure:3925: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "qti"
@@ -160,69 +234,69 @@ configure: failed program was:
 | #define VERSION "0.01"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:3696: checking for grep that handles long lines and -e
-configure:3754: result: /bin/grep
-configure:3759: checking for egrep
-configure:3821: result: /bin/grep -E
-configure:3826: checking for ANSI C header files
-configure:3846: gcc -c -g -O2  conftest.c >&5
-configure:3846: $? = 0
-configure:3919: gcc -o conftest -g -O2   conftest.c  >&5
-configure:3919: $? = 0
-configure:3919: ./conftest
-configure:3919: $? = 0
-configure:3930: result: yes
-configure:3943: checking for sys/types.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for sys/stat.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for stdlib.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for string.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for memory.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for strings.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for inttypes.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for stdint.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3943: checking for unistd.h
-configure:3943: gcc -c -g -O2  conftest.c >&5
-configure:3943: $? = 0
-configure:3943: result: yes
-configure:3958: checking gsl/gsl_linalg.h usability
-configure:3958: gcc -c -g -O2  conftest.c >&5
-configure:3958: $? = 0
-configure:3958: result: yes
-configure:3958: checking gsl/gsl_linalg.h presence
-configure:3958: gcc -E  conftest.c
-configure:3958: $? = 0
-configure:3958: result: yes
-configure:3958: checking for gsl/gsl_linalg.h
-configure:3958: result: yes
-configure:3958: checking gsl_matrix.h usability
-configure:3958: gcc -c -g -O2  conftest.c >&5
+configure:3954: checking for grep that handles long lines and -e
+configure:4012: result: /bin/grep
+configure:4017: checking for egrep
+configure:4079: result: /bin/grep -E
+configure:4084: checking for ANSI C header files
+configure:4104: gcc -c -g -O2  conftest.c >&5
+configure:4104: $? = 0
+configure:4177: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4177: $? = 0
+configure:4177: ./conftest
+configure:4177: $? = 0
+configure:4188: result: yes
+configure:4201: checking for sys/types.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for sys/stat.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for stdlib.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for string.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for memory.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for strings.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for inttypes.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for stdint.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4201: checking for unistd.h
+configure:4201: gcc -c -g -O2  conftest.c >&5
+configure:4201: $? = 0
+configure:4201: result: yes
+configure:4216: checking gsl/gsl_linalg.h usability
+configure:4216: gcc -c -g -O2  conftest.c >&5
+configure:4216: $? = 0
+configure:4216: result: yes
+configure:4216: checking gsl/gsl_linalg.h presence
+configure:4216: gcc -E  conftest.c
+configure:4216: $? = 0
+configure:4216: result: yes
+configure:4216: checking for gsl/gsl_linalg.h
+configure:4216: result: yes
+configure:4216: checking gsl_matrix.h usability
+configure:4216: gcc -c -g -O2  conftest.c >&5
 conftest.c:55:24: fatal error: gsl_matrix.h: No such file or directory
 compilation terminated.
-configure:3958: $? = 1
+configure:4216: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "qti"
@@ -279,12 +353,12 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <gsl_matrix.h>
-configure:3958: result: no
-configure:3958: checking gsl_matrix.h presence
-configure:3958: gcc -E  conftest.c
+configure:4216: result: no
+configure:4216: checking gsl_matrix.h presence
+configure:4216: gcc -E  conftest.c
 conftest.c:22:24: fatal error: gsl_matrix.h: No such file or directory
 compilation terminated.
-configure:3958: $? = 1
+configure:4216: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "qti"
@@ -308,32 +382,32 @@ configure: failed program was:
 | #define HAVE_GSL_GSL_LINALG_H 1
 | /* end confdefs.h.  */
 | #include <gsl_matrix.h>
-configure:3958: result: no
-configure:3958: checking for gsl_matrix.h
-configure:3958: result: no
-configure:3958: checking gsl/gsl_vector.h usability
-configure:3958: gcc -c -g -O2  conftest.c >&5
-configure:3958: $? = 0
-configure:3958: result: yes
-configure:3958: checking gsl/gsl_vector.h presence
-configure:3958: gcc -E  conftest.c
-configure:3958: $? = 0
-configure:3958: result: yes
-configure:3958: checking for gsl/gsl_vector.h
-configure:3958: result: yes
-configure:3968: checking for main in -lm
-configure:3987: gcc -o conftest -g -O2   conftest.c -lm   >&5
-configure:3987: $? = 0
-configure:3996: result: yes
-configure:4008: checking for main in -lgslcblas
-configure:4027: gcc -o conftest -g -O2   conftest.c -lgslcblas  -lm  >&5
-configure:4027: $? = 0
-configure:4036: result: yes
-configure:4048: checking for main in -lgsl
-configure:4067: gcc -o conftest -g -O2   conftest.c -lgsl  -lgslcblas -lm  >&5
-configure:4067: $? = 0
-configure:4076: result: yes
-configure:4219: creating ./config.status
+configure:4216: result: no
+configure:4216: checking for gsl_matrix.h
+configure:4216: result: no
+configure:4216: checking gsl/gsl_vector.h usability
+configure:4216: gcc -c -g -O2  conftest.c >&5
+configure:4216: $? = 0
+configure:4216: result: yes
+configure:4216: checking gsl/gsl_vector.h presence
+configure:4216: gcc -E  conftest.c
+configure:4216: $? = 0
+configure:4216: result: yes
+configure:4216: checking for gsl/gsl_vector.h
+configure:4216: result: yes
+configure:4226: checking for main in -lm
+configure:4245: gcc -o conftest -g -O2   conftest.c -lm   >&5
+configure:4245: $? = 0
+configure:4254: result: yes
+configure:4266: checking for main in -lgslcblas
+configure:4285: gcc -o conftest -g -O2   conftest.c -lgslcblas  -lm  >&5
+configure:4285: $? = 0
+configure:4294: result: yes
+configure:4306: checking for main in -lgsl
+configure:4325: gcc -o conftest -g -O2   conftest.c -lgsl  -lgslcblas -lm  >&5
+configure:4325: $? = 0
+configure:4334: result: yes
+configure:4477: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -350,9 +424,9 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on ubuntu
 
-config.status:853: creating Makefile
-config.status:853: creating config.h
-config.status:1082: executing depfiles commands
+config.status:856: creating Makefile
+config.status:856: creating config.h
+config.status:1085: executing depfiles commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -367,6 +441,10 @@ ac_cv_env_CPPFLAGS_set=
 ac_cv_env_CPPFLAGS_value=
 ac_cv_env_CPP_set=
 ac_cv_env_CPP_value=
+ac_cv_env_F77_set=
+ac_cv_env_F77_value=
+ac_cv_env_FFLAGS_set=
+ac_cv_env_FFLAGS_value=
 ac_cv_env_LDFLAGS_set=
 ac_cv_env_LDFLAGS_value=
 ac_cv_env_LIBS_set=
@@ -377,6 +455,7 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
+ac_cv_f77_compiler_gnu=yes
 ac_cv_header_gsl_gsl_linalg_h=yes
 ac_cv_header_gsl_gsl_vector_h=yes
 ac_cv_header_gsl_matrix_h=no
@@ -404,8 +483,10 @@ ac_cv_path_mkdir=/bin/mkdir
 ac_cv_prog_AWK=gawk
 ac_cv_prog_CPP='gcc -E'
 ac_cv_prog_ac_ct_CC=gcc
+ac_cv_prog_ac_ct_F77=gfortran
 ac_cv_prog_cc_c89=
 ac_cv_prog_cc_g=yes
+ac_cv_prog_f77_g=yes
 ac_cv_prog_make_make_set=yes
 am_cv_CC_dependencies_compiler_type=gcc3
 
@@ -435,6 +516,8 @@ ECHO_N='-n'
 ECHO_T=''
 EGREP='/bin/grep -E'
 EXEEXT=''
+F77='gfortran'
+FFLAGS='-g -O2'
 GREP='/bin/grep'
 INSTALL_DATA='${INSTALL} -m 644'
 INSTALL_PROGRAM='${INSTALL}'
@@ -460,6 +543,7 @@ SHELL='/bin/bash'
 STRIP=''
 VERSION='0.01'
 ac_ct_CC='gcc'
+ac_ct_F77='gfortran'
 am__EXEEXT_FALSE=''
 am__EXEEXT_TRUE='#'
 am__fastdepCC_FALSE='#'

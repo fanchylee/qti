@@ -1,6 +1,9 @@
 AC_INIT([qti], [0.01], [bug-report@])
 AM_INIT_AUTOMAKE([foreign -Wall])
+echo "                             Testing for a C compiler"
 AC_PROG_CC
+echo "                             Testing for a FORTRAN compiler"
+AC_PROG_F77
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile])
 

@@ -1,0 +1,427 @@
+
+qti.mexa64:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000000830 <_init>:
+ 830:	48 83 ec 08          	sub    $0x8,%rsp
+ 834:	e8 d7 00 00 00       	callq  910 <call_gmon_start>
+ 839:	48 83 c4 08          	add    $0x8,%rsp
+ 83d:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000000840 <mxGetClassID@plt-0x10>:
+ 840:	ff 35 c2 17 20 00    	pushq  0x2017c2(%rip)        # 202008 <_GLOBAL_OFFSET_TABLE_+0x8>
+ 846:	ff 25 c4 17 20 00    	jmpq   *0x2017c4(%rip)        # 202010 <_GLOBAL_OFFSET_TABLE_+0x10>
+ 84c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000850 <mxGetClassID@plt>:
+ 850:	ff 25 c2 17 20 00    	jmpq   *0x2017c2(%rip)        # 202018 <_GLOBAL_OFFSET_TABLE_+0x18>
+ 856:	68 00 00 00 00       	pushq  $0x0
+ 85b:	e9 e0 ff ff ff       	jmpq   840 <_init+0x10>
+
+0000000000000860 <mxGetM@plt>:
+ 860:	ff 25 ba 17 20 00    	jmpq   *0x2017ba(%rip)        # 202020 <_GLOBAL_OFFSET_TABLE_+0x20>
+ 866:	68 01 00 00 00       	pushq  $0x1
+ 86b:	e9 d0 ff ff ff       	jmpq   840 <_init+0x10>
+
+0000000000000870 <mxIsComplex@plt>:
+ 870:	ff 25 b2 17 20 00    	jmpq   *0x2017b2(%rip)        # 202028 <_GLOBAL_OFFSET_TABLE_+0x28>
+ 876:	68 02 00 00 00       	pushq  $0x2
+ 87b:	e9 c0 ff ff ff       	jmpq   840 <_init+0x10>
+
+0000000000000880 <mxGetScalar@plt>:
+ 880:	ff 25 aa 17 20 00    	jmpq   *0x2017aa(%rip)        # 202030 <_GLOBAL_OFFSET_TABLE_+0x30>
+ 886:	68 03 00 00 00       	pushq  $0x3
+ 88b:	e9 b0 ff ff ff       	jmpq   840 <_init+0x10>
+
+0000000000000890 <mxGetPi@plt>:
+ 890:	ff 25 a2 17 20 00    	jmpq   *0x2017a2(%rip)        # 202038 <_GLOBAL_OFFSET_TABLE_+0x38>
+ 896:	68 04 00 00 00       	pushq  $0x4
+ 89b:	e9 a0 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008a0 <mexPrintf@plt>:
+ 8a0:	ff 25 9a 17 20 00    	jmpq   *0x20179a(%rip)        # 202040 <_GLOBAL_OFFSET_TABLE_+0x40>
+ 8a6:	68 05 00 00 00       	pushq  $0x5
+ 8ab:	e9 90 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008b0 <mexErrMsgTxt@plt>:
+ 8b0:	ff 25 92 17 20 00    	jmpq   *0x201792(%rip)        # 202048 <_GLOBAL_OFFSET_TABLE_+0x48>
+ 8b6:	68 06 00 00 00       	pushq  $0x6
+ 8bb:	e9 80 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008c0 <mxCreateDoubleMatrix_700@plt>:
+ 8c0:	ff 25 8a 17 20 00    	jmpq   *0x20178a(%rip)        # 202050 <_GLOBAL_OFFSET_TABLE_+0x50>
+ 8c6:	68 07 00 00 00       	pushq  $0x7
+ 8cb:	e9 70 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008d0 <mxGetN@plt>:
+ 8d0:	ff 25 82 17 20 00    	jmpq   *0x201782(%rip)        # 202058 <_GLOBAL_OFFSET_TABLE_+0x58>
+ 8d6:	68 08 00 00 00       	pushq  $0x8
+ 8db:	e9 60 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008e0 <mxGetPr@plt>:
+ 8e0:	ff 25 7a 17 20 00    	jmpq   *0x20177a(%rip)        # 202060 <_GLOBAL_OFFSET_TABLE_+0x60>
+ 8e6:	68 09 00 00 00       	pushq  $0x9
+ 8eb:	e9 50 ff ff ff       	jmpq   840 <_init+0x10>
+
+00000000000008f0 <_Unwind_Resume@plt>:
+ 8f0:	ff 25 72 17 20 00    	jmpq   *0x201772(%rip)        # 202068 <_GLOBAL_OFFSET_TABLE_+0x68>
+ 8f6:	68 0a 00 00 00       	pushq  $0xa
+ 8fb:	e9 40 ff ff ff       	jmpq   840 <_init+0x10>
+
+0000000000000900 <__cxa_finalize@plt>:
+ 900:	ff 25 6a 17 20 00    	jmpq   *0x20176a(%rip)        # 202070 <_GLOBAL_OFFSET_TABLE_+0x70>
+ 906:	68 0b 00 00 00       	pushq  $0xb
+ 90b:	e9 30 ff ff ff       	jmpq   840 <_init+0x10>
+
+Disassembly of section .text:
+
+0000000000000910 <call_gmon_start>:
+ 910:	48 83 ec 08          	sub    $0x8,%rsp
+ 914:	48 8b 05 c5 16 20 00 	mov    0x2016c5(%rip),%rax        # 201fe0 <_DYNAMIC+0x228>
+ 91b:	48 85 c0             	test   %rax,%rax
+ 91e:	74 02                	je     922 <call_gmon_start+0x12>
+ 920:	ff d0                	callq  *%rax
+ 922:	48 83 c4 08          	add    $0x8,%rsp
+ 926:	c3                   	retq   
+ 927:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+ 92e:	00 00 
+
+0000000000000930 <deregister_tm_clones>:
+ 930:	48 8d 05 58 17 20 00 	lea    0x201758(%rip),%rax        # 20208f <__TMC_END__+0x7>
+ 937:	48 8d 3d 4a 17 20 00 	lea    0x20174a(%rip),%rdi        # 202088 <__TMC_END__>
+ 93e:	55                   	push   %rbp
+ 93f:	48 29 f8             	sub    %rdi,%rax
+ 942:	48 89 e5             	mov    %rsp,%rbp
+ 945:	48 83 f8 0e          	cmp    $0xe,%rax
+ 949:	77 02                	ja     94d <deregister_tm_clones+0x1d>
+ 94b:	5d                   	pop    %rbp
+ 94c:	c3                   	retq   
+ 94d:	48 8b 05 84 16 20 00 	mov    0x201684(%rip),%rax        # 201fd8 <_DYNAMIC+0x220>
+ 954:	48 85 c0             	test   %rax,%rax
+ 957:	74 f2                	je     94b <deregister_tm_clones+0x1b>
+ 959:	5d                   	pop    %rbp
+ 95a:	ff e0                	jmpq   *%rax
+ 95c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000000960 <register_tm_clones>:
+ 960:	48 8d 05 21 17 20 00 	lea    0x201721(%rip),%rax        # 202088 <__TMC_END__>
+ 967:	48 8d 3d 1a 17 20 00 	lea    0x20171a(%rip),%rdi        # 202088 <__TMC_END__>
+ 96e:	55                   	push   %rbp
+ 96f:	48 29 f8             	sub    %rdi,%rax
+ 972:	48 89 e5             	mov    %rsp,%rbp
+ 975:	48 c1 f8 03          	sar    $0x3,%rax
+ 979:	48 89 c2             	mov    %rax,%rdx
+ 97c:	48 c1 ea 3f          	shr    $0x3f,%rdx
+ 980:	48 01 d0             	add    %rdx,%rax
+ 983:	48 89 c6             	mov    %rax,%rsi
+ 986:	48 d1 fe             	sar    %rsi
+ 989:	75 02                	jne    98d <register_tm_clones+0x2d>
+ 98b:	5d                   	pop    %rbp
+ 98c:	c3                   	retq   
+ 98d:	48 8b 15 5c 16 20 00 	mov    0x20165c(%rip),%rdx        # 201ff0 <_DYNAMIC+0x238>
+ 994:	48 85 d2             	test   %rdx,%rdx
+ 997:	74 f2                	je     98b <register_tm_clones+0x2b>
+ 999:	5d                   	pop    %rbp
+ 99a:	ff e2                	jmpq   *%rdx
+ 99c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000009a0 <__do_global_dtors_aux>:
+ 9a0:	80 3d e1 16 20 00 00 	cmpb   $0x0,0x2016e1(%rip)        # 202088 <__TMC_END__>
+ 9a7:	75 27                	jne    9d0 <__do_global_dtors_aux+0x30>
+ 9a9:	48 83 3d 47 16 20 00 	cmpq   $0x0,0x201647(%rip)        # 201ff8 <_DYNAMIC+0x240>
+ 9b0:	00 
+ 9b1:	55                   	push   %rbp
+ 9b2:	48 89 e5             	mov    %rsp,%rbp
+ 9b5:	74 0c                	je     9c3 <__do_global_dtors_aux+0x23>
+ 9b7:	48 8b 3d ba 16 20 00 	mov    0x2016ba(%rip),%rdi        # 202078 <__dso_handle>
+ 9be:	e8 3d ff ff ff       	callq  900 <__cxa_finalize@plt>
+ 9c3:	e8 68 ff ff ff       	callq  930 <deregister_tm_clones>
+ 9c8:	5d                   	pop    %rbp
+ 9c9:	c6 05 b8 16 20 00 01 	movb   $0x1,0x2016b8(%rip)        # 202088 <__TMC_END__>
+ 9d0:	f3 c3                	repz retq 
+ 9d2:	66 66 66 66 66 2e 0f 	data32 data32 data32 data32 nopw %cs:0x0(%rax,%rax,1)
+ 9d9:	1f 84 00 00 00 00 00 
+
+00000000000009e0 <frame_dummy>:
+ 9e0:	48 83 3d c8 13 20 00 	cmpq   $0x0,0x2013c8(%rip)        # 201db0 <__JCR_END__>
+ 9e7:	00 
+ 9e8:	74 1f                	je     a09 <frame_dummy+0x29>
+ 9ea:	48 8b 05 f7 15 20 00 	mov    0x2015f7(%rip),%rax        # 201fe8 <_DYNAMIC+0x230>
+ 9f1:	48 85 c0             	test   %rax,%rax
+ 9f4:	74 13                	je     a09 <frame_dummy+0x29>
+ 9f6:	55                   	push   %rbp
+ 9f7:	48 8d 3d b2 13 20 00 	lea    0x2013b2(%rip),%rdi        # 201db0 <__JCR_END__>
+ 9fe:	48 89 e5             	mov    %rsp,%rbp
+ a01:	ff d0                	callq  *%rax
+ a03:	5d                   	pop    %rbp
+ a04:	e9 57 ff ff ff       	jmpq   960 <register_tm_clones>
+ a09:	e9 52 ff ff ff       	jmpq   960 <register_tm_clones>
+ a0e:	66 90                	xchg   %ax,%ax
+
+0000000000000a10 <mxIsInt>:
+ a10:	55                   	push   %rbp
+ a11:	48 89 e5             	mov    %rsp,%rbp
+ a14:	53                   	push   %rbx
+ a15:	48 83 ec 08          	sub    $0x8,%rsp
+ a19:	48 89 fb             	mov    %rdi,%rbx
+ a1c:	e8 4f fe ff ff       	callq  870 <mxIsComplex@plt>
+ a21:	ba 01 00 00 00       	mov    $0x1,%edx
+ a26:	84 c0                	test   %al,%al
+ a28:	74 49                	je     a73 <mxIsInt+0x63>
+ a2a:	48 89 df             	mov    %rbx,%rdi
+ a2d:	e8 9e fe ff ff       	callq  8d0 <mxGetN@plt>
+ a32:	ba 01 00 00 00       	mov    $0x1,%edx
+ a37:	48 83 f8 01          	cmp    $0x1,%rax
+ a3b:	74 36                	je     a73 <mxIsInt+0x63>
+ a3d:	48 89 df             	mov    %rbx,%rdi
+ a40:	e8 1b fe ff ff       	callq  860 <mxGetM@plt>
+ a45:	ba 01 00 00 00       	mov    $0x1,%edx
+ a4a:	48 83 f8 01          	cmp    $0x1,%rax
+ a4e:	74 23                	je     a73 <mxIsInt+0x63>
+ a50:	48 89 df             	mov    %rbx,%rdi
+ a53:	e8 f8 fd ff ff       	callq  850 <mxGetClassID@plt>
+ a58:	ba 01 00 00 00       	mov    $0x1,%edx
+ a5d:	83 f8 07             	cmp    $0x7,%eax
+ a60:	77 11                	ja     a73 <mxIsInt+0x63>
+ a62:	48 89 df             	mov    %rbx,%rdi
+ a65:	e8 e6 fd ff ff       	callq  850 <mxGetClassID@plt>
+ a6a:	83 f8 0f             	cmp    $0xf,%eax
+ a6d:	0f 96 c2             	setbe  %dl
+ a70:	0f b6 d2             	movzbl %dl,%edx
+ a73:	89 d0                	mov    %edx,%eax
+ a75:	48 83 c4 08          	add    $0x8,%rsp
+ a79:	5b                   	pop    %rbx
+ a7a:	5d                   	pop    %rbp
+ a7b:	c3                   	retq   
+
+0000000000000a7c <mexFunction>:
+ a7c:	55                   	push   %rbp
+ a7d:	48 89 e5             	mov    %rsp,%rbp
+ a80:	41 57                	push   %r15
+ a82:	41 56                	push   %r14
+ a84:	41 55                	push   %r13
+ a86:	41 54                	push   %r12
+ a88:	53                   	push   %rbx
+ a89:	48 83 ec 28          	sub    $0x28,%rsp
+ a8d:	41 89 ff             	mov    %edi,%r15d
+ a90:	48 89 75 c0          	mov    %rsi,-0x40(%rbp)
+ a94:	49 89 ce             	mov    %rcx,%r14
+ a97:	41 bc 00 00 00 00    	mov    $0x0,%r12d
+ a9d:	49 89 e5             	mov    %rsp,%r13
+ aa0:	83 fa 02             	cmp    $0x2,%edx
+ aa3:	0f 84 dc 00 00 00    	je     b85 <mexFunction+0x109>
+ aa9:	83 fa 03             	cmp    $0x3,%edx
+ aac:	74 0e                	je     abc <mexFunction+0x40>
+ aae:	83 fa 01             	cmp    $0x1,%edx
+ ab1:	0f 85 3a 01 00 00    	jne    bf1 <mexFunction+0x175>
+ ab7:	e9 5b 01 00 00       	jmpq   c17 <mexFunction+0x19b>
+ abc:	48 8b 19             	mov    (%rcx),%rbx
+ abf:	48 89 df             	mov    %rbx,%rdi
+ ac2:	e8 a9 fd ff ff       	callq  870 <mxIsComplex@plt>
+ ac7:	84 c0                	test   %al,%al
+ ac9:	74 42                	je     b0d <mexFunction+0x91>
+ acb:	48 89 df             	mov    %rbx,%rdi
+ ace:	e8 fd fd ff ff       	callq  8d0 <mxGetN@plt>
+ ad3:	48 83 f8 01          	cmp    $0x1,%rax
+ ad7:	74 34                	je     b0d <mexFunction+0x91>
+ ad9:	48 89 df             	mov    %rbx,%rdi
+ adc:	e8 7f fd ff ff       	callq  860 <mxGetM@plt>
+ ae1:	48 83 f8 01          	cmp    $0x1,%rax
+ ae5:	74 26                	je     b0d <mexFunction+0x91>
+ ae7:	48 89 df             	mov    %rbx,%rdi
+ aea:	e8 61 fd ff ff       	callq  850 <mxGetClassID@plt>
+ aef:	83 f8 07             	cmp    $0x7,%eax
+ af2:	77 19                	ja     b0d <mexFunction+0x91>
+ af4:	48 89 df             	mov    %rbx,%rdi
+ af7:	e8 54 fd ff ff       	callq  850 <mxGetClassID@plt>
+ afc:	83 f8 0f             	cmp    $0xf,%eax
+ aff:	76 0c                	jbe    b0d <mexFunction+0x91>
+ b01:	48 8d 3d 88 02 00 00 	lea    0x288(%rip),%rdi        # d90 <_fini+0x10>
+ b08:	e8 a3 fd ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ b0d:	49 8b 3e             	mov    (%r14),%rdi
+ b10:	e8 6b fd ff ff       	callq  880 <mxGetScalar@plt>
+ b15:	f2 44 0f 2c e0       	cvttsd2si %xmm0,%r12d
+ b1a:	49 8b 5e 08          	mov    0x8(%r14),%rbx
+ b1e:	48 89 df             	mov    %rbx,%rdi
+ b21:	e8 4a fd ff ff       	callq  870 <mxIsComplex@plt>
+ b26:	84 c0                	test   %al,%al
+ b28:	74 42                	je     b6c <mexFunction+0xf0>
+ b2a:	48 89 df             	mov    %rbx,%rdi
+ b2d:	e8 9e fd ff ff       	callq  8d0 <mxGetN@plt>
+ b32:	48 83 f8 01          	cmp    $0x1,%rax
+ b36:	74 34                	je     b6c <mexFunction+0xf0>
+ b38:	48 89 df             	mov    %rbx,%rdi
+ b3b:	e8 20 fd ff ff       	callq  860 <mxGetM@plt>
+ b40:	48 83 f8 01          	cmp    $0x1,%rax
+ b44:	74 26                	je     b6c <mexFunction+0xf0>
+ b46:	48 89 df             	mov    %rbx,%rdi
+ b49:	e8 02 fd ff ff       	callq  850 <mxGetClassID@plt>
+ b4e:	83 f8 07             	cmp    $0x7,%eax
+ b51:	77 19                	ja     b6c <mexFunction+0xf0>
+ b53:	48 89 df             	mov    %rbx,%rdi
+ b56:	e8 f5 fc ff ff       	callq  850 <mxGetClassID@plt>
+ b5b:	83 f8 0f             	cmp    $0xf,%eax
+ b5e:	76 0c                	jbe    b6c <mexFunction+0xf0>
+ b60:	48 8d 3d 69 02 00 00 	lea    0x269(%rip),%rdi        # dd0 <_fini+0x50>
+ b67:	e8 44 fd ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ b6c:	49 8b 7e 08          	mov    0x8(%r14),%rdi
+ b70:	e8 0b fd ff ff       	callq  880 <mxGetScalar@plt>
+ b75:	f2 0f 2c d8          	cvttsd2si %xmm0,%ebx
+ b79:	c7 45 cc 02 00 00 00 	movl   $0x2,-0x34(%rbp)
+ b80:	e9 a4 00 00 00       	jmpq   c29 <mexFunction+0x1ad>
+ b85:	48 8b 19             	mov    (%rcx),%rbx
+ b88:	48 89 df             	mov    %rbx,%rdi
+ b8b:	e8 e0 fc ff ff       	callq  870 <mxIsComplex@plt>
+ b90:	84 c0                	test   %al,%al
+ b92:	74 42                	je     bd6 <mexFunction+0x15a>
+ b94:	48 89 df             	mov    %rbx,%rdi
+ b97:	e8 34 fd ff ff       	callq  8d0 <mxGetN@plt>
+ b9c:	48 83 f8 01          	cmp    $0x1,%rax
+ ba0:	74 34                	je     bd6 <mexFunction+0x15a>
+ ba2:	48 89 df             	mov    %rbx,%rdi
+ ba5:	e8 b6 fc ff ff       	callq  860 <mxGetM@plt>
+ baa:	48 83 f8 01          	cmp    $0x1,%rax
+ bae:	74 26                	je     bd6 <mexFunction+0x15a>
+ bb0:	48 89 df             	mov    %rbx,%rdi
+ bb3:	e8 98 fc ff ff       	callq  850 <mxGetClassID@plt>
+ bb8:	83 f8 07             	cmp    $0x7,%eax
+ bbb:	77 19                	ja     bd6 <mexFunction+0x15a>
+ bbd:	48 89 df             	mov    %rbx,%rdi
+ bc0:	e8 8b fc ff ff       	callq  850 <mxGetClassID@plt>
+ bc5:	83 f8 0f             	cmp    $0xf,%eax
+ bc8:	76 0c                	jbe    bd6 <mexFunction+0x15a>
+ bca:	48 8d 3d 3f 02 00 00 	lea    0x23f(%rip),%rdi        # e10 <_fini+0x90>
+ bd1:	e8 da fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ bd6:	49 8b 3e             	mov    (%r14),%rdi
+ bd9:	e8 a2 fc ff ff       	callq  880 <mxGetScalar@plt>
+ bde:	f2 44 0f 2c e0       	cvttsd2si %xmm0,%r12d
+ be3:	bb 00 00 00 00       	mov    $0x0,%ebx
+ be8:	c7 45 cc 01 00 00 00 	movl   $0x1,-0x34(%rbp)
+ bef:	eb 38                	jmp    c29 <mexFunction+0x1ad>
+ bf1:	89 d6                	mov    %edx,%esi
+ bf3:	48 8d 3d 0e 03 00 00 	lea    0x30e(%rip),%rdi        # f08 <_fini+0x188>
+ bfa:	b8 00 00 00 00       	mov    $0x0,%eax
+ bff:	e8 9c fc ff ff       	callq  8a0 <mexPrintf@plt>
+ c04:	48 8d 3d 07 03 00 00 	lea    0x307(%rip),%rdi        # f12 <_fini+0x192>
+ c0b:	e8 a0 fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ c10:	bb 00 00 00 00       	mov    $0x0,%ebx
+ c15:	eb 12                	jmp    c29 <mexFunction+0x1ad>
+ c17:	bb 02 00 00 00       	mov    $0x2,%ebx
+ c1c:	41 bc 02 00 00 00    	mov    $0x2,%r12d
+ c22:	c7 45 cc 00 00 00 00 	movl   $0x0,-0x34(%rbp)
+ c29:	41 83 ff 01          	cmp    $0x1,%r15d
+ c2d:	74 12                	je     c41 <mexFunction+0x1c5>
+ c2f:	41 83 ff 03          	cmp    $0x3,%r15d
+ c33:	74 0c                	je     c41 <mexFunction+0x1c5>
+ c35:	48 8d 3d 0c 02 00 00 	lea    0x20c(%rip),%rdi        # e48 <_fini+0xc8>
+ c3c:	e8 6f fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ c41:	48 63 45 cc          	movslq -0x34(%rbp),%rax
+ c45:	4d 8d 34 c6          	lea    (%r14,%rax,8),%r14
+ c49:	49 8b 3e             	mov    (%r14),%rdi
+ c4c:	e8 7f fc ff ff       	callq  8d0 <mxGetN@plt>
+ c51:	48 83 f8 01          	cmp    $0x1,%rax
+ c55:	74 0c                	je     c63 <mexFunction+0x1e7>
+ c57:	48 8d 3d 0a 02 00 00 	lea    0x20a(%rip),%rdi        # e68 <_fini+0xe8>
+ c5e:	e8 4d fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ c63:	49 8b 3e             	mov    (%r14),%rdi
+ c66:	e8 e5 fb ff ff       	callq  850 <mxGetClassID@plt>
+ c6b:	83 e8 06             	sub    $0x6,%eax
+ c6e:	83 f8 09             	cmp    $0x9,%eax
+ c71:	76 0c                	jbe    c7f <mexFunction+0x203>
+ c73:	48 8d 3d 0e 02 00 00 	lea    0x20e(%rip),%rdi        # e88 <_fini+0x108>
+ c7a:	e8 31 fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ c7f:	49 8b 3e             	mov    (%r14),%rdi
+ c82:	e8 d9 fb ff ff       	callq  860 <mxGetM@plt>
+ c87:	44 89 e1             	mov    %r12d,%ecx
+ c8a:	0f af cb             	imul   %ebx,%ecx
+ c8d:	39 c1                	cmp    %eax,%ecx
+ c8f:	74 1e                	je     caf <mexFunction+0x233>
+ c91:	83 7d cc 02          	cmpl   $0x2,-0x34(%rbp)
+ c95:	75 0c                	jne    ca3 <mexFunction+0x227>
+ c97:	89 c2                	mov    %eax,%edx
+ c99:	c1 fa 1f             	sar    $0x1f,%edx
+ c9c:	41 f7 fc             	idiv   %r12d
+ c9f:	89 c3                	mov    %eax,%ebx
+ ca1:	eb 0c                	jmp    caf <mexFunction+0x233>
+ ca3:	48 8d 3d 0e 02 00 00 	lea    0x20e(%rip),%rdi        # eb8 <_fini+0x138>
+ caa:	e8 01 fc ff ff       	callq  8b0 <mexErrMsgTxt@plt>
+ caf:	49 8b 3e             	mov    (%r14),%rdi
+ cb2:	e8 29 fc ff ff       	callq  8e0 <mxGetPr@plt>
+ cb7:	49 8b 3e             	mov    (%r14),%rdi
+ cba:	e8 b1 fb ff ff       	callq  870 <mxIsComplex@plt>
+ cbf:	84 c0                	test   %al,%al
+ cc1:	75 0c                	jne    ccf <mexFunction+0x253>
+ cc3:	ba 00 00 00 00       	mov    $0x0,%edx
+ cc8:	45 85 e4             	test   %r12d,%r12d
+ ccb:	7f 3f                	jg     d0c <mexFunction+0x290>
+ ccd:	eb 48                	jmp    d17 <mexFunction+0x29b>
+ ccf:	49 8b 3e             	mov    (%r14),%rdi
+ cd2:	e8 b9 fb ff ff       	callq  890 <mxGetPi@plt>
+ cd7:	ba 00 00 00 00       	mov    $0x0,%edx
+ cdc:	45 85 e4             	test   %r12d,%r12d
+ cdf:	7f 11                	jg     cf2 <mexFunction+0x276>
+ ce1:	eb 34                	jmp    d17 <mexFunction+0x29b>
+ ce3:	83 c0 01             	add    $0x1,%eax
+ ce6:	39 d8                	cmp    %ebx,%eax
+ ce8:	75 f9                	jne    ce3 <mexFunction+0x267>
+ cea:	83 c2 01             	add    $0x1,%edx
+ ced:	44 39 e2             	cmp    %r12d,%edx
+ cf0:	74 25                	je     d17 <mexFunction+0x29b>
+ cf2:	b8 00 00 00 00       	mov    $0x0,%eax
+ cf7:	85 db                	test   %ebx,%ebx
+ cf9:	7f e8                	jg     ce3 <mexFunction+0x267>
+ cfb:	eb ed                	jmp    cea <mexFunction+0x26e>
+ cfd:	83 c0 01             	add    $0x1,%eax
+ d00:	39 d8                	cmp    %ebx,%eax
+ d02:	75 f9                	jne    cfd <mexFunction+0x281>
+ d04:	83 c2 01             	add    $0x1,%edx
+ d07:	44 39 e2             	cmp    %r12d,%edx
+ d0a:	74 0b                	je     d17 <mexFunction+0x29b>
+ d0c:	b8 00 00 00 00       	mov    $0x0,%eax
+ d11:	85 db                	test   %ebx,%ebx
+ d13:	7f e8                	jg     cfd <mexFunction+0x281>
+ d15:	eb ed                	jmp    d04 <mexFunction+0x288>
+ d17:	44 39 e3             	cmp    %r12d,%ebx
+ d1a:	41 0f 4f dc          	cmovg  %r12d,%ebx
+ d1e:	ba 00 00 00 00       	mov    $0x0,%edx
+ d23:	89 de                	mov    %ebx,%esi
+ d25:	89 df                	mov    %ebx,%edi
+ d27:	e8 94 fb ff ff       	callq  8c0 <mxCreateDoubleMatrix_700@plt>
+ d2c:	48 8b 55 c0          	mov    -0x40(%rbp),%rdx
+ d30:	48 89 02             	mov    %rax,(%rdx)
+ d33:	48 89 c7             	mov    %rax,%rdi
+ d36:	e8 a5 fb ff ff       	callq  8e0 <mxGetPr@plt>
+ d3b:	85 db                	test   %ebx,%ebx
+ d3d:	7e 32                	jle    d71 <mexFunction+0x2f5>
+ d3f:	41 83 c4 01          	add    $0x1,%r12d
+ d43:	b9 00 00 00 00       	mov    $0x0,%ecx
+ d48:	ba 00 00 00 00       	mov    $0x0,%edx
+ d4d:	48 63 f1             	movslq %ecx,%rsi
+ d50:	f2 41 0f 10 44 d5 00 	movsd  0x0(%r13,%rdx,8),%xmm0
+ d57:	f2 0f 11 04 f0       	movsd  %xmm0,(%rax,%rsi,8)
+ d5c:	48 83 c2 01          	add    $0x1,%rdx
+ d60:	44 01 e1             	add    %r12d,%ecx
+ d63:	39 d3                	cmp    %edx,%ebx
+ d65:	7f e6                	jg     d4d <mexFunction+0x2d1>
+ d67:	eb 08                	jmp    d71 <mexFunction+0x2f5>
+ d69:	48 89 c7             	mov    %rax,%rdi
+ d6c:	e8 7f fb ff ff       	callq  8f0 <_Unwind_Resume@plt>
+ d71:	48 8d 65 d8          	lea    -0x28(%rbp),%rsp
+ d75:	5b                   	pop    %rbx
+ d76:	41 5c                	pop    %r12
+ d78:	41 5d                	pop    %r13
+ d7a:	41 5e                	pop    %r14
+ d7c:	41 5f                	pop    %r15
+ d7e:	5d                   	pop    %rbp
+ d7f:	c3                   	retq   
+
+Disassembly of section .fini:
+
+0000000000000d80 <_fini>:
+ d80:	48 83 ec 08          	sub    $0x8,%rsp
+ d84:	48 83 c4 08          	add    $0x8,%rsp
+ d88:	c3                   	retq   
