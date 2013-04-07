@@ -55,11 +55,9 @@ static VALUE sd(VALUE self, VALUE da_v, VALUE db_v, VALUE v_v){
 		rb_hash_aset(rethash[j], ID2SYM(rb_intern("sv")), rb_float_new(sv[j]));
 	}
 	retary = rb_ary_new4(min(da,db), rethash);
-	
 	return retary;
 }
 void Init_qti(){
-	cQti = rb_define_class("Qti", rb_cObject);
-	rb_define_singleton_method(cQti, "sd", sd, 3);
+//	cQti = rb_define_class("Qti", rb_cObject);
+	rb_define_method(rb_cObject, "sd", sd, 3);//like a normal function, because everything is the child of Object class
 }
-
